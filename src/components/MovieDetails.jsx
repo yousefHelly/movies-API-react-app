@@ -27,6 +27,9 @@ export const MovieDetails = () => {
               <div className='d-flex flex-column align-items-start justify-content-center gap-4 p-4'>
                 <p className='fs-4 fw-bold text-black-50 mb-0'>اسم الفيلم : {movieData.title}</p>
                 {
+                  document.title=`Movies App${movieData.title?` | ${movieData.title}`:""}`
+                }
+                {
                   movieData.original_title != movieData.title && <p className='fs-4 fw-bold text-black-50 mb-0'>الاسم بلغة الفيلم  : {movieData.original_title}</p>
                 }
                 <p className='fs-4 fw-bold text-black-50 mb-0'>تاريخ الإصدار : {movieData.release_date}</p>
