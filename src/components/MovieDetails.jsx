@@ -15,6 +15,7 @@ export const MovieDetails = () => {
   useEffect(()=>{
     getMovieData(id)
   },[])
+  document.title=`Movies App${movieData.title?` | ${movieData.title}`:""}`
   return (
     <React.Fragment>
       <div>
@@ -26,9 +27,6 @@ export const MovieDetails = () => {
             <Col lg={8} md={6}>
               <div className='d-flex flex-column align-items-start justify-content-center gap-4 p-4'>
                 <p className='fs-4 fw-bold text-black-50 mb-0'>اسم الفيلم : {movieData.title}</p>
-                {
-                  document.title=`Movies App${movieData.title?` | ${movieData.title}`:""}`
-                }
                 {
                   movieData.original_title != movieData.title && <p className='fs-4 fw-bold text-black-50 mb-0'>الاسم بلغة الفيلم  : {movieData.original_title}</p>
                 }
